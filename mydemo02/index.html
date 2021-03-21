@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap后台管理</title>
+    <!-- 引入Bootstrap核心样式文件（必须） -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <!-- 你自己的样式或其他文件 -->
+    <link rel="stylesheet" href="css/index.css">
+    <!--站点图标-->
+    <link rel="shortcut icon" href="imgs/lk_favicon.ico" type="image/x-icon">
+</head>
+<body>
+<!-- 头部导航 -->
+<header>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <!-- 小屏幕时的按钮 -->
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu2" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- logo -->
+      <a class="navbar-brand" href="#">
+        <img src="imgs/logo.svg" width="140">
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="menu1">
+        <!-- 搜索栏 -->
+        <form class="navbar-form navbar-left">
+            <div class="form-group" style="display: flex;">
+                <input type="text" class="form-control" placeholder="Search">            
+                <button type="" class="btn btn-default"><i style="color:#777;" class="glyphicon glyphicon-search"></i></button>
+            </div>
+        </form>
+      
+        <ul class="nav navbar-nav navbar-right">
+            <!-- 头像 -->
+            <li><a href="#"><img class="img-circle" src="imgs/face1.jpg" width="40"></a></li>
+            <!-- 名字加下拉菜单 -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">匕首雨 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">ActivityLog</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Signout</a></li>
+              </ul>
+            </li>
+            <!-- 邮件 -->
+            <li><a href="#"><i class="glyphicon glyphicon-envelope"></i></a></li>
+            <!-- 消息 -->
+            <li><a href="#"><i class="glyphicon glyphicon-info-sign"></i></a></li>
+            <!-- 退出 -->
+            <li><a href="#"><i class="glyphicon glyphicon-off"></i></a></li>
+        </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+</header>
+
+
+<!-- 侧边导航 -->
+<aside class="">
+
+<ul id="menu2" class="nav nav-pills nav-stacked collapse navbar-collapse">
+    <li role="presentation" ><a href="#" class="active" data-url="home.html"><span>主页</span><i class="glyphicon glyphicon-home"></i></a></li>
+    <li role="presentation"><a href="#" data-url="form.html"><span>表单</span><i class="glyphicon glyphicon-list-alt"></i></a></li>
+    <li role="presentation"><a href="#" data-url="tabs.html"><span>表格</span><i class="glyphicon glyphicon-th-list"></i></a></li>
+    <li role="presentation">
+        <a href="#" class="switchDrop">
+            <span>多级菜单</span>
+            <i class="switchDropIcon glyphicon glyphicon-menu-left"></i>
+            <i class="glyphicon glyphicon-tag"></i>
+        </a>
+        <ul class="nav hidden">
+            <li role="presentation" class="dropDownMenu2nd">
+                <a href="#" class="switchDrop"><i class="glyphicon glyphicon-record"></i><span>二级菜单</span><i class="switchDropIcon glyphicon glyphicon-menu-left" style="margin-left:auto !important;"></i></a>
+                <ul class="nav hidden">
+                    <li role="presentation" class="dropDownMenu3th">
+                        <a href="#" class=""><i class="glyphicon glyphicon-record"></i><span>三级菜单</span></a>
+                    </li>
+                    <li role="presentation" class="dropDownMenu3th">
+                        <a href="#" class=""><i class="glyphicon glyphicon-record"></i><span>三级菜单</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropDownMenu2nd">
+                <a href="#" class=""><i class="glyphicon glyphicon-record"></i><span>二级菜单</span></a>
+            </li>
+        </ul>
+    </li>
+</ul>
+</aside>
+
+
+<!-- 展示窗 -->
+<div class="content">
+    <iframe src="home.html" ></iframe>
+</div>
+</body>
+
+<script src="lib/jquery/jquery.js"></script>
+<!-- 引入所有的Bootstrap的JS插件 -->
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+<!-- 你自己的脚本文件 -->
+<script src="js/index.js"></script>
+
+</html>

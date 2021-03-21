@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <!-- 引入Bootstrap核心样式文件（必须） -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <!-- 你自己的样式或其他文件 -->
+    <link rel="stylesheet" href="css/index.css">
+    <!--站点图标-->
+    <link rel="shortcut icon" href="imgs/lk_favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div style="margin: 0;">
+    <ol class="breadcrumb" >
+      <li><a href="#">Home</a></li>
+    </ol>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6"><div id="graph01" style="width: 100%;height:400px;"></div></div>
+    <!-- <div id="graph01" class="col-md-6"></div> -->
+    <div id="graph02" class="col-md-6">graph02</div>
+  </div>
+</div>
+
+
+<script src="lib/jquery/jquery.js"></script>
+<!-- 引入所有的Bootstrap的JS插件 -->
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+<!-- 你自己的脚本文件 -->
+<!-- <script src="lib/echarts.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.0.2/dist/echarts.min.js"></script>
+<script type="text/javascript">
+// 基于准备好的dom，初始化echarts实例
+var graph01 = echarts.init(document.getElementById('graph01'));
+
+// 指定图表的配置项和数据
+var option = {
+    title: {
+        text: 'ECharts 入门示例'
+    },
+    tooltip: {},
+    legend: {
+        data:['销量']
+    },
+    xAxis: {
+        data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+    },
+    yAxis: {},
+    series: [{
+        name: '销量',
+        type: 'bar',
+        data: [5, 20, 36, 10, 10, 20]
+    }]
+};
+
+// 使用刚指定的配置项和数据显示图表。
+graph01.setOption(option);
+</script>
+<script type="text/javascript">
+localStorage.setItem('documentHeight',$("body").height());
+</script>
+</body>
+</html>
